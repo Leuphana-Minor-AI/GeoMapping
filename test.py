@@ -8,6 +8,15 @@ import webbrowser
 from campus_orte import ORTE
 import campus_orte
 
+from transformers import pipeline
+
+# Lade ein kleines, kostenloses Modell (z.B. "tiiuae/falcon-7b-instruct")
+generator = pipeline("text-generation", model="tiiuae/falcon-7b-instruct")
+
+user_input = input("Deine Frage: ")
+result = generator(user_input, max_new_tokens=100)
+print("Antwort:", result[0]['generated_text'])
+
 print(campus_orte.__file__)
 
 
