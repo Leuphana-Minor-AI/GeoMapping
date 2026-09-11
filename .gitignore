@@ -13,3 +13,13 @@ __pycache__/
 
 # Ignore other common folders
 cache/
+
+# .gitignore
+.env
+env.local
+.env.*
+*.env
+__pycache__/
+*.pyc
+.DS_Store
+*.log
